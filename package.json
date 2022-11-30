@@ -7,11 +7,15 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "eslint": "eslint",
-    "pre-check": "tsc && npx lint-staged"
+    "pre-check": "tsc && npx lint-staged",
+    "stylelint": "stylelint"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "npm run eslint"
+    ],
+    "src/**/*.{css,less,scss}": [
+      "npm run stylelint"
     ]
   },
   "config": {
@@ -36,6 +40,10 @@
     "eslint-plugin-react": "^7.31.11",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.4",
+    "stylelint": "^14.15.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^5.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }
