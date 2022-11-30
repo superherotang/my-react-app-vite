@@ -2,7 +2,6 @@
   "name": "my-react-app-vite",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
     "build": "tsc && vite build",
@@ -14,6 +13,11 @@
     "src/**/*.{ts,tsx}": [
       "npm run eslint"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -27,6 +31,7 @@
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "@vitejs/plugin-react": "^2.2.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.28.0",
     "eslint-plugin-react": "^7.31.11",
     "husky": "^8.0.2",
